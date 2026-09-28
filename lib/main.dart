@@ -1460,7 +1460,7 @@ Future<void> _attachTagsToDriveItems() async {
         frequency: const Duration(minutes: 15),
         existingWorkPolicy: ExistingWorkPolicy.update, // FIX: workmanager 0.6.0 uses ExistingWorkPolicy (not ExistingPeriodicWorkPolicy)
         constraints: Constraints(
-          networkType: NetworkType.notRequired,
+          networkType: NetworkType.not_required,
           requiresBatteryNotLow: true,
         ),
       );
@@ -1472,7 +1472,7 @@ Future<void> _attachTagsToDriveItems() async {
         initialDelay: _initialDelayUntil9AM(),
         existingWorkPolicy: ExistingWorkPolicy.keep, // FIX: workmanager 0.6.0 uses ExistingWorkPolicy (not ExistingPeriodicWorkPolicy)
         constraints: Constraints(
-          networkType: NetworkType.notRequired,
+          networkType: NetworkType.not_required,
         ),
       );
       _bgScanScheduled = true;
@@ -4023,7 +4023,7 @@ Future<void> _showDeleteAccountDialog() async {
       kBackgroundScanTaskName,
       existingWorkPolicy: ExistingWorkPolicy.replace,
       constraints: Constraints(
-        networkType: NetworkType.notRequired,
+        networkType: NetworkType.not_required,
         requiresBatteryNotLow: true,
       ),
     );
@@ -4037,7 +4037,7 @@ Future<void> _showDeleteAccountDialog() async {
       initialDelay: _initialDelayUntil9AM(),
       existingWorkPolicy: ExistingWorkPolicy.keep, // FIX: workmanager 0.6.0 uses ExistingWorkPolicy (not ExistingPeriodicWorkPolicy)
       constraints: Constraints(
-        networkType: NetworkType.notRequired,
+        networkType: NetworkType.not_required,
       ),
     );
     _bgScanScheduled = true;

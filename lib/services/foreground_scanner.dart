@@ -66,7 +66,7 @@ class ForegroundScanner {
         frequency: const Duration(hours: 6),
         constraints: Constraints(
           requiresCharging: true,          // Only runs when plugged in
-          networkType: NetworkType.notRequired,
+          networkType: NetworkType.not_required,
           requiresBatteryNotLow: false,
         ),
         existingWorkPolicy: ExistingWorkPolicy.keep, // FIX: workmanager 0.6.0 uses ExistingWorkPolicy (not ExistingPeriodicWorkPolicy)
