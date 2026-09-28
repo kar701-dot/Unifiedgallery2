@@ -1,0 +1,92 @@
+# Miscellaneous
+*.class
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio build artifacts
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# -----------------------------------------------------------------------
+# SECURITY: NEVER commit these — they contain API keys and signing secrets
+# -----------------------------------------------------------------------
+android/key.properties
+android/app/google-services.json
+ios/GoogleService-Info.plist
+*.jks
+*.keystore
+
+# -----------------------------------------------------------------------
+# Build logs and large generated files (no useful history)
+# -----------------------------------------------------------------------
+*.log
+build_output.txt
+build_tail.txt
+flutter_run.log
+flutter_run2.log
+flutter_run3.log
+flutter_run*.log
+flutter_run*.txt
+analyze.log
+analyze*.txt
+analyze_*.txt
+mega_lines.txt
+hs_err_pid*.log
+replay_pid*.log
+debug-info/
+
+# Generated files (recreated by build_runner)
+lib/**/*.g.dart
+lib/**/*.freezed.dart
+
+# Zip archives
+*.zip
+main.zip
+
+# Android build artifacts
+android/app/build/
+android/.gradle/
+.gradle/
+
+android/build/
+**/build/
+
+go-mega-temp/
+
+*.hprof
+

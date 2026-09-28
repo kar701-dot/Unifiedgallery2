@@ -1,0 +1,105 @@
+name: testapp
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.1.0+86
+
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # Use a standard SDK range
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.1
+  cupertino_icons: ^1.0.8
+  flutter_appauth: ^11.0.0
+  flutter_secure_storage: ^10.0.0
+  photo_view: ^0.15.0
+  shared_preferences: ^2.5.3
+  intl: ^0.20.2
+  gal: ^2.3.2
+  share_plus: ^12.0.1
+  path_provider: ^2.1.5
+  video_player: ^2.9.2
+  cached_network_image: ^3.3.1
+  flutter_cache_manager: ^3.4.1
+  connectivity_plus: ^7.0.0
+  shimmer: ^3.0.0
+  image: ^4.8.0
+  collection: ^1.18.0
+  file_picker: ^10.3.8
+  firebase_core: ^3.10.0
+  firebase_auth: ^5.5.0
+  firebase_crashlytics: ^4.3.0
+  firebase_analytics: ^11.5.0
+  firebase_messaging: ^15.2.10
+  flutter_local_notifications: ^18.0.1
+  google_sign_in: ^6.2.1
+  in_app_purchase: ^3.3.0  # REQUIRED: 3.3.0+ ships in_app_purchase_android 0.5.x which uses Billing Library 8.0.0+
+  # Play Console requires Billing Library 8.0.0+ from Aug 31, 2026 (was ^3.2.3 = billing 7.1.1)
+  package_info_plus: ^9.0.0
+  url_launcher: ^6.3.0
+  # ✅ ADD THIS LINE:
+  provider: ^6.1.2
+  google_mlkit_image_labeling: ^0.14.0
+  google_mlkit_object_detection: ^0.15.1
+  google_mlkit_text_recognition: ^0.15.0
+  google_mlkit_face_detection: ^0.13.0
+
+  # ✅ ADD THESE:
+  isar: ^3.1.0
+  isar_flutter_libs: ^3.1.0
+  google_fonts: ^6.3.2
+  animations: ^2.1.1
+  flutter_animate: ^4.5.2
+  app_links: ^6.4.1
+  flutter_staggered_grid_view: ^0.7.0
+  cloud_firestore: ^5.6.12
+  open_file: ^3.3.0
+  encrypt: ^5.0.3
+  http_parser: ^4.0.2
+  crypto: ^3.0.7
+  workmanager: ^0.6.0  # FIX: 0.9.0 used Android 15-only JobScheduler.forNamespace() → crash on Android ≤ 14
+  photo_manager: ^3.9.0
+  photo_manager_image_provider: ^2.2.0
+  pro_image_editor: ^13.2.0
+  tflite_flutter: ^0.12.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_native_splash: ^2.4.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_lints: ^6.0.0 # <-- MOVED HERE
+  # ✅ ADD THESE:
+  isar_generator: ^3.1.0+1
+  build_runner: ^2.4.0 # Or latest version
+
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+
+  # --- ADDED THIS ASSET DECLARATION ---
+  assets:
+    - assets/images/ # This includes all images in this folder
+    - assets/models/
+
+# --- CONFIG BLOCKS MOVED TO ROOT LEVEL ---
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21 # Required for adaptive icons
+  adaptive_icon_background: "#F5F7FA" # Optional: background color
+  adaptive_icon_foreground: "assets/images/app_icon.png" # Use same icon
+
+flutter_native_splash:
+  color: "#F5F7FA" # Your app's background color
+  image: assets/images/app_icon.png # <-- USE YOUR NEW ICON
+  android_12:
+    image: assets/images/app_icon.png # <-- USE YOUR NEW ICON
+    color: "#F5F7FA"
+  ios: true
